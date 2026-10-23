@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
-</head>
-<body>
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container-fluid"> 
     <h1>Productos</h1>
     <p>{{message}}</p>
     <p>Estos son los productos que ofrecemos.</p>
-</body>
-</html>
+</div>
+
+{% endblock %}
