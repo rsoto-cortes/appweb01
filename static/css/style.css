@@ -1,0 +1,106 @@
+/* ==========================================================================
+   1. VARIABLES Y CONFIGURACIÓN GENERAL
+   ========================================================================== */
+:root {
+    --bg-color: #fcfcfc;
+    --text-primary: #1a1a1a;
+    --text-secondary: #666666;
+    --accent-color: #000000;
+    --border-color: #eaeaea;
+    --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --max-width: 900px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+/* ==========================================================================
+   2. DISEÑO DEL CONTENEDOR PRINCIPAL (LAYOUT)
+   ========================================================================== */
+.main-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   3. COMPONENTE: NAVEGACIÓN (layout.html)
+   ========================================================================== */
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 3rem;
+}
+
+.nav-item {
+    font-size: 0.95rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color);
+}
+
+.nav-link.active {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   4. COMPONENTE: CONTENIDO PRINCIPAL (Vistas dinámicas)
+   ========================================================================== */
+.content-section {
+    animation: fadeIn 0.4s ease;
+}
+
+.content-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.content-message {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.content-text {
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+/* Animación sutil de carga */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
