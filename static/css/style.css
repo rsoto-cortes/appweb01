@@ -101,6 +101,68 @@ body {
 
 /* Animación sutil de carga */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(4px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+p:first-of-type {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 1.15rem;
+}
+
+/* Tarjeta de servicios */
+.servicios-card {
+    max-width: 520px;
+    margin: 2rem auto;
+    overflow: hidden;
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.12);
+}
+
+.servicios-card-img {
+    height: 240px;
+    padding: 1rem;
+    object-fit: contain;
+    background-color: #fff4e8;
+}
+
+.servicios-card .card-body {
+    padding: 1.5rem;
+}
+
+.servicios-card .card-title {
+    margin-bottom: 0.75rem;
+}
+
+.servicios-card .card-text {
+    margin-bottom: 1.25rem;
+    color: var(--text-secondary);
+}
+
+/* Configuración del carrusel */
+.mi-carrusel {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+/* Ajustar tamaño de las imágenes */
+.mi-carrusel .carousel-item img {
+    height: 350px;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* Hacer visibles los controles sobre fondos claros */
+.mi-carrusel .carousel-control-prev-icon,
+.mi-carrusel .carousel-control-next-icon {
+    filter: invert(1);
 }
